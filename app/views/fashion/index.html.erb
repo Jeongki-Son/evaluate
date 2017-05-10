@@ -1,0 +1,14 @@
+<div class="row">
+  <% @style.each do |style| %>
+    <div class="col-md-3">
+      <a href="/fashion/<%= style.fashion.id %>/style/<%= style.id %>">
+        <div class="thumbnail" style="text-align:center">
+          <%= image_tag style.photo %>
+          <%= style.name %>
+          (<%= style.age %>)<br>
+          직업: <%= style.job %>
+        </div>
+      </a>
+    </div>
+  <% end %>
+</div>
